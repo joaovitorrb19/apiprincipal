@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiPrincipal.Controllers {
@@ -8,6 +9,7 @@ namespace ApiPrincipal.Controllers {
             
         }
 
+        [Authorize]
         public ActionResult Index(){
             return View();
         }

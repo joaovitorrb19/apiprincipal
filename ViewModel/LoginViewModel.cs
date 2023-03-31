@@ -10,5 +10,9 @@ namespace ApiPrincipal.ViewModel{
         [Required]
         [DataType(DataType.Password)]
         public string Senha {get;set;} 
+
+        
+        
+        public string? returnUrl{get;set;}
     }
 }

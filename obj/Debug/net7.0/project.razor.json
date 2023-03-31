@@ -18655,6 +18655,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Usuario\\AcessoRestrito.cshtml",
+      "TargetPath": "Views\\Usuario\\AcessoRestrito.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -18672,6 +18677,11 @@
     {
       "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Shared\\_MensagemPartial.cshtml",
       "TargetPath": "Views\\Shared\\_MensagemPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Usuario\\Cadastrar.cshtml",
+      "TargetPath": "Views\\Usuario\\Cadastrar.cshtml",
       "FileKind": "mvc"
     },
     {

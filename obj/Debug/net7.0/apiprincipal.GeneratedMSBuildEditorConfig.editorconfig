@@ -9,37 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = apiprincipal
 build_property.RootNamespace = apiprincipal
-build_property.ProjectDir = d:\Programçao\Programação\apiprincipal\
+build_property.ProjectDir = D:\Programçao\Programação\apiprincipal\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = d:\Programçao\Programação\apiprincipal
+build_property.MSBuildProjectDirectory = D:\Programçao\Programação\apiprincipal
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/Programçao/Programação/apiprincipal/Views/Categoria/Cadastrar.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/Categoria/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENhZGFzdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/Home/Index.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/Shared/_Layout.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/Shared/_MensagemPartial.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/Shared/_MensagemPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW5zYWdlbVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/Usuario/Login.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/Usuario/AcessoRestrito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBY2Vzc29SZXN0cml0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programçao/Programação/apiprincipal/Views/Usuario/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Programçao/Programação/apiprincipal/Views/Usuario/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/_ViewImports.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Programçao/Programação/apiprincipal/Views/_ViewStart.cshtml]
+[D:/Programçao/Programação/apiprincipal/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
