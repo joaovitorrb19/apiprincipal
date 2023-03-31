@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\apiprincipal.csproj": {}
+    "D:\\Programçao\\Programação\\apiprincipal\\apiprincipal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\apiprincipal.csproj": {
+    "D:\\Programçao\\Programação\\apiprincipal\\apiprincipal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\apiprincipal.csproj",
+        "projectUniqueName": "D:\\Programçao\\Programação\\apiprincipal\\apiprincipal.csproj",
         "projectName": "apiprincipal",
-        "projectPath": "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\apiprincipal.csproj",
+        "projectPath": "D:\\Programçao\\Programação\\apiprincipal\\apiprincipal.csproj",
         "packagesPath": "C:\\Users\\joaovitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\obj\\",
+        "outputPath": "D:\\Programçao\\Programação\\apiprincipal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joaovitor\\AppData\\Roaming\\NuGet\\NuGet.Config",

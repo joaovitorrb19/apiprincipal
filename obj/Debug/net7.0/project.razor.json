@@ -18645,6 +18645,11 @@
   "RootNamespace": "apiprincipal",
   "Documents": [
     {
+      "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Categoria\\Cadastrar.cshtml",
+      "TargetPath": "Views\\Categoria\\Cadastrar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -18655,8 +18660,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Usuario\\Login.cshtml",
+      "TargetPath": "Views\\Usuario\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Programçao\\Programação\\apiprincipal\\Views\\Shared\\_MensagemPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_MensagemPartial.cshtml",
       "FileKind": "mvc"
     },
     {

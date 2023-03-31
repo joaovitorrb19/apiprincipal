@@ -19,7 +19,10 @@
                         <a class="navbar-brand" href="#">API Principal</a>
                         <li class="nav-item">
                             <a class="nav-link " asp-controller="Home" asp-action="Index">Home</a>
-                        </li>            
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link " asp-controller="Categoria" asp-action="Cadastrar">Categorias</a>
+                        </li>          
                   
                     </ul>
                      
@@ -28,12 +31,13 @@
     
 
     <div class="container">
+        <partial name="_MensagemPartial"></partial>
         @RenderBody()
 
     </div>
     
-    <footer class="border-top footer text-muted" style="">
-        <div class="container">
+    <footer class="border-top footer text-muted bg-dark" style="">
+        <div class="container text-white">
             &copy; 2023 - AulaUsuarios - Joaozinho
         </div>
     </footer>

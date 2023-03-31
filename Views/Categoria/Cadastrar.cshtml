@@ -1,0 +1,18 @@
+@model CategoriaModel
+
+
+<form asp-action="Cadastrar">
+
+<div asp-validation-summary="ModelOnly"></div>
+
+    <input asp-for="@Model.IdCategoria" hidden>
+
+    <div class="form-control">
+        <label asp-for="@Model.NomeCategoria">Categoria:</label><br>
+        <input asp-for="@Model.NomeCategoria">
+        <span asp-validation-for="@Model.NomeCategoria"></span>
+    </div>
+
+<button class="btn btn-primary" type="submit">Salvar</button>
+<a class="btn btn-primary" asp-action="Index" asp-controller="Home">Cancelar</a>
+</form>

@@ -1,3 +1,4 @@
+using ApiPrincipal.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiPrincipal.Data {
@@ -7,6 +8,6 @@ namespace ApiPrincipal.Data {
                 
             }
 
-            
+            public DbSet<CategoriaModel> Categorias {get;set;}
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GgZNW3/ygJwCiyxjYQElTuZQB/wT2LJXwwUk3o4SssKn3ZKW7BBbpQByOtCKenF9uAd0CkEziwmLDUajzx7uNw==",
+  "dgSpecHash": "1LvapOtuwATPJloI+QpSLfvJCTAQEBd0P3HoXCfNo8rjLKUcVsQAGhg+991aMVw/k+B0uoPrsFcFwyTfqOR0tA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joaovitor\\Desktop\\Programação\\apiprincipal\\apiprincipal.csproj",
+  "projectFilePath": "D:\\Programçao\\Programação\\apiprincipal\\apiprincipal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joaovitor\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\joaovitor\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
