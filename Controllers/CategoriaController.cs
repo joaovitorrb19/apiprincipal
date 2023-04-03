@@ -2,6 +2,7 @@ using ApiPrincipal.Data;
 using ApiPrincipal.Extensions;
 using ApiPrincipal.Model;
 using ApiPrincipal.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiPrincipal.Controllers {
@@ -14,6 +15,8 @@ namespace ApiPrincipal.Controllers {
             _unit = unit;
             _repository = repository;
         }
+
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult> Cadastrar(int id = 0){
             
@@ -24,7 +27,8 @@ namespace ApiPrincipal.Controllers {
                 return View();
              }
         }
-
+        
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult> Cadastrar([FromForm]CategoriaModel CategoriaFormulario){
 

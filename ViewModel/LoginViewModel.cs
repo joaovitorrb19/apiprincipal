@@ -11,8 +11,7 @@ namespace ApiPrincipal.ViewModel{
         [DataType(DataType.Password)]
         public string Senha {get;set;} 
 
-        
-        
+        public bool LembrarDeMim{get;set;}
         public string? returnUrl{get;set;}
     }
 }

@@ -9,6 +9,7 @@ namespace ApiPrincipal.ViewModel {
 
         [Required(ErrorMessage = "CPF requerido...")]
         [StringLength(11,ErrorMessage = "Tamanho do campo Invalido...")]
+        [RegularExpression("[0-9]{11}",ErrorMessage = "CPF Inválido")]
         public string CPF {get;set;}
 
         [Required]
@@ -16,7 +17,7 @@ namespace ApiPrincipal.ViewModel {
         public string Telefone {get;set;}
 
         [Required(ErrorMessage = "Nome Completo requerido...")]
-        [DataType(DataType.Text)]
+        //[RegularExpression("[a-zA-Z,' ']",ErrorMessage="Nome inválido")]
         [MinLength(6)]
         [MaxLength(25)]
         public string NomeCompleto{get;set;}

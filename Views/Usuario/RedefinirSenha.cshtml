@@ -1,0 +1,24 @@
+@model RedefinirSenhaViewModel
+
+<form asp-action="RedefinirSenha">
+    <div asp-validation-summary="ModelOnly"></div>
+
+        <input asp-for="@Model.Email" hidden>
+
+        <input asp-for="@Model.Token" hidden>
+       
+    <div>
+        <label asp-for="@Model.NovaSenha"></label>
+        <input asp-for="@Model.NovaSenha">
+        <span asp-validation-for="@Model.NovaSenha"></span>
+    </div>
+
+    <div>
+        <label asp-for="@Model.ConfNovaSenha"></label>
+        <input asp-for="@Model.ConfNovaSenha">
+        <span asp-validation-for="@Model.ConfNovaSenha"></span>
+    </div>
+
+<button type="submit" class="btn btn-primary">Redefinir</button>
+<a class="btn btn-secondary" asp-action="Login">Cancelar</a>
+</form>

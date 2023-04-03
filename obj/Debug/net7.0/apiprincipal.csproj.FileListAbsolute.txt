@@ -808,3 +808,6 @@ D:\Programçao\Programação\apiprincipal\obj\Debug\net7.0\refint\apiprincipal.d
 D:\Programçao\Programação\apiprincipal\obj\Debug\net7.0\apiprincipal.pdb
 D:\Programçao\Programação\apiprincipal\obj\Debug\net7.0\apiprincipal.genruntimeconfig.cache
 D:\Programçao\Programação\apiprincipal\obj\Debug\net7.0\ref\apiprincipal.dll
+D:\Programçao\Programação\apiprincipal\bin\Debug\net7.0\MailKit.dll
+D:\Programçao\Programação\apiprincipal\bin\Debug\net7.0\MimeKit.dll
+D:\Programçao\Programação\apiprincipal\bin\Debug\net7.0\BouncyCastle.Crypto.dll
