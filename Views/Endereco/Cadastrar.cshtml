@@ -1,0 +1,24 @@
+
+@model EnderecoModel
+
+<form asp-controller="Endereco" asp-action="Cadastrar" class="form-control m-3">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <input asp-for="EnderecoId" hidden>
+    <input asp-for="UserName" value="@Context.User.Identity.Name" hidden>
+
+    <div class="m-3">
+     <label asp-for="cep">CEP</label><br>
+     <input class="form-control" asp-for="cep" required minlength="8" maxlength="8"><br>
+     <span asp-validation-for="cep" class="text-danger"></span>
+    </div>
+    <div class="m-3">
+     <label asp-for="complemento">Complemento</label><br>
+     <input class="form-control" asp-for="complemento"><br>
+     <span asp-validation-for="complemento" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-secondary">Salvar</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancelar</a>
+</form>
+
+

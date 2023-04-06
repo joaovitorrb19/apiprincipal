@@ -1,0 +1,12 @@
+@model PedidoModel
+
+@inject UserManager<UsuarioModel> user
+
+@{
+    var UsuarioAtivo = Context.User.Identity.Name;
+}
+
+<form asp-action="Cadastrar">
+    <input asp-for="UserName" value="@UsuarioAtivo" hidden>
+<button type="submit" class="btn btn-primary">Adicionar</button>
+</form>

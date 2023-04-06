@@ -1,0 +1,24 @@
+@model ItemPedidoModel
+
+@{
+    ViewBag.Subtitulo = "ItemPedido";
+}
+
+<form asp-controller="ItemPedido" asp-action="Cadastrar" class="form-control m-3">
+    <input asp-for="ItemPedidoId" hidden>
+    <input asp-for="PedidoId" hidden>
+    
+    <div class="m-3">
+     <label asp-for="ProdutoId">Produto</label><br>
+     <select asp-for="ProdutoId" asp-items="@ViewBag.ProdutosItensPedidos" class="form-control"></select>
+     <span asp-validation-for="ProdutoId" class="text-danger"></span>
+    </div>
+    <div class="m-3">
+     <label asp-for="Quantidade">Quantidade</label><br>
+     <input class="form-control-sm" asp-for="Quantidade"><br>
+     <span asp-validation-for="Quantidade" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Pedido" asp-action="EditarPedido" asp-route-id="@Model.PedidoId">Cancelar</a>
+</form>
+

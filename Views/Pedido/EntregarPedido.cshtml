@@ -1,0 +1,17 @@
+@inject IBaseRepository<EnderecoModel> end
+
+@model PedidoModel
+
+<form asp-action="EntregarPedido">
+
+<input asp-for="PedidoId" hidden>
+
+<div asp-validation-summary="All"></div>
+
+<label asp-for="EnderecoId">Endereço de entrega:</label><br>
+<select asp-for="EnderecoId" asp-items="@ViewBag.EnderecosEntregarPedido"></select><br>
+<span asp-validation-for="EnderecoId"></span>
+
+<button type="submit" class="btn btn-primary">Entregar</button>
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>
+</form>

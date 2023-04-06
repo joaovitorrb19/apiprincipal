@@ -1,0 +1,39 @@
+@model List<ProdutoModel>
+
+@{
+    ViewBag.Subtitulo = "Produto";
+}
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Nome do Produto</th>
+            <th>Estoque</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Data Cadastro</th>
+            <th>Data Alteração</th>
+            <th>Usuario ue criou</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.NomeProduto</td>
+                <td>@item.QuantidadeEstoque</td>
+                <td>@(item.PrecoProduto.ToString("C"))</td>
+                <td>@item.Categoria.NomeCategoria</td>
+                <td>@item.DataCadastro</td>
+                <td>@item.DataAlteracao</td>
+                <td>@item.UsuarioQueCriou</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Produto" asp-action="Cadastrar" asp-route-id="@item.IdProduto">Editar</a>
+                    <a class="btn btn-danger" asp-controller="Produto" asp-action="Excluir" asp-route-id="@item.IdProduto">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-controller="Produto" asp-action="Cadastrar">Adicionar</a>

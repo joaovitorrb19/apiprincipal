@@ -1,0 +1,50 @@
+@model List<PedidoModel>
+
+    <table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Número do Pedido</th>
+            <th>Status do Pedido</th>
+            <th>Data de Fechamento</td>
+            <th>Valor Do Pedido</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.PedidoId</td>
+                <td>@item.Situacao</td>
+                <td>@item.DataFechamento</td>
+                <td>@item.ValorTotal.ToString("C")</td>
+                <td>
+
+                    
+                    
+                    @if(@item.DataFechamento != null){
+                    <a class="btn btn-secondary">Editar</a>
+                    <a class="btn btn-secondary">Fechado</a>
+                    }else {
+                        <a class="btn btn-primary" asp-action="EditarPedido" asp-route-id="@item.PedidoId">Editar</a>
+                        <a class="btn btn-primary" asp-action="FecharPedido" asp-route-id="@item.PedidoId">Fechar</a>
+                    }
+
+                    @if(@item.Situacao == "Saiu para entrega"){
+                    <a class="btn btn-secondary">Entregue</a>
+                    } else {
+                        <a class="btn btn-primary" asp-action="EntregarPedido" asp-route-id="@item.PedidoId">Entregar</a>
+                    }
+                    <a class="btn btn-primary" asp-action="Excluir" asp-route-id="@item.PedidoId">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+
+    <a class="btn btn-primary" asp-controller="Pedido" asp-action="Cadastrar">Adicionar Pedido</a>
+    
+    <a class="btn btn-primary" asp-controller="Endereco" asp-action="Index">Endereços</a>
+    
+      <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Retornar Home</a>
+    

@@ -1,18 +1,24 @@
 @model CategoriaModel
 
+@{
+    ViewBag.Subtitulo = "Categoria";
+}
 
-<form asp-action="Cadastrar">
+
+<form asp-action="Cadastrar" class="form-control m-3">
 
 <div asp-validation-summary="ModelOnly"></div>
 
-    <input asp-for="@Model.IdCategoria" hidden>
+    <input asp-for="@Model.CategoriaId" hidden>
+    <input asp-for="@Model.UsuarioQueCriou" hidden>
+    <input asp-for="@Model.DataCadastro" hidden>
 
-    <div class="form-control">
+    <div class="m-3">
         <label asp-for="@Model.NomeCategoria">Categoria:</label><br>
         <input asp-for="@Model.NomeCategoria">
-        <span asp-validation-for="@Model.NomeCategoria"></span>
+        <span asp-validation-for="@Model.NomeCategoria" class="text-danger"></span>
     </div>
 
-<button class="btn btn-primary" type="submit">Salvar</button>
+<button class="btn btn-secondary m-3" type="submit">Salvar</button>
 <a class="btn btn-primary" asp-action="Index" asp-controller="Home">Cancelar</a>
 </form>

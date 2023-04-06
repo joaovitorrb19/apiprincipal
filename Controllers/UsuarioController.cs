@@ -153,7 +153,8 @@ namespace ApiPrincipal.Controllers
                     var UsuarioBD = await _UserManager.FindByEmailAsync(UsuarioVM.Email.ToUpper().Trim());
 
                     var token = await _UserManager.GenerateEmailConfirmationTokenAsync(UsuarioBD);
-                    var url = Url.Action(nameof(Login), "Usuario", new { token, UsuarioBD.Email }, Request.Scheme);
+
+                    var url = Url.Action(nameof(ConfirmacaoEmailRealizadoComSucesso), "Usuario", new { token, UsuarioBD.Email }, Request.Scheme);
 
                     var EmailParaEnviar = PopularEmailParaConfirmacaoDeEmailService.PopularEmailParaConfirmacaoDeEmail(UsuarioVM.Email, url);
                     var resultadopp = _EmailService.EnviarEmailAsync(EmailParaEnviar);

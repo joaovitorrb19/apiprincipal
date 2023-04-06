@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\css\\_Layout.css"
     },
     {
+      "Id": "D:\\Programçao\\Programação\\apiprincipal\\wwwroot\\img\\zaunitas.gif",
+      "PackagePath": "staticwebassets\\img\\zaunitas.gif"
+    },
+    {
       "Id": "D:\\Programçao\\Programação\\apiprincipal\\wwwroot\\lib\\bootstrap5\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap5"
     },

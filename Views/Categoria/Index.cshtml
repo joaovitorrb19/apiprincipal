@@ -1,0 +1,32 @@
+@{
+    ViewBag.Subtitulo = "Categoria";
+}
+@model List<CategoriaModel>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Nome da Categoria</th>
+            <th>Usuario Que Criou</th>
+            <th>Data de Criação</th>
+            <th>Data de Alteração</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NomeCategoria</td>
+                <td>@item.UsuarioQueCriou</td>
+                <td>@item.DataCadastro</td>
+                <td>@item.DataAlteracao</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Categoria" asp-action="Cadastrar" asp-route-id="@item.CategoriaId">Editar</a>
+                    <a class="btn btn-danger" asp-controller="Categoria"  asp-action="Excluir" asp-route-id="@item.CategoriaId">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-controller="Categoria" asp-action="Cadastrar">Cadastrar Categoria</a>

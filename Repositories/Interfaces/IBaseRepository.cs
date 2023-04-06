@@ -14,9 +14,9 @@ namespace ApiPrincipal.Repositories.Interfaces{
 
         public Task Excluir(int id);
 
-        public Task<CategoriaModel> BuscarCategoriaPorId(int id);
+        public Task<T> BuscarEntidadePorId(int id);
 
-        public bool VerificarExistenciaPorNome(string NomeCategoria);
+        public bool VerificarExistenciaPorNome(string NomeModel);
     }
 
 }

@@ -9,5 +9,14 @@ namespace ApiPrincipal.Data {
             }
 
             public DbSet<CategoriaModel> Categorias {get;set;}
+
+            public DbSet<ProdutoModel> Produtos{get;set;}
+
+            public DbSet<PedidoModel> Pedidos{get;set;}
+
+            public DbSet<EnderecoModel> Enderecos{get;set;}
+
+            public DbSet<ItemPedidoModel> ItensPedidos {get;set;}
+            
     }
 }

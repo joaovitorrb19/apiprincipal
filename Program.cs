@@ -42,7 +42,12 @@ builder.Services.ConfigureApplicationCookie(
 
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 builder.Services.AddScoped<IBaseRepository<CategoriaModel>,CategoriaRepository>();
-builder.Services.AddScoped<DataContext>();
+builder.Services.AddScoped<IBaseRepository<PedidoModel>,PedidoRepository>();
+builder.Services.AddScoped<IBaseRepository<ProdutoModel>,ProdutoRepository>();
+builder.Services.AddScoped<IBaseRepository<EnderecoModel>,EnderecoRepository>();
+builder.Services.AddScoped<IBaseRepository<ItemPedidoModel>,ItemPedidoRepository>();
+
+builder.Services.AddScoped<DataContext,DataContext>();
 
 builder.Services.AddScoped<IEmailService,EmailService>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));

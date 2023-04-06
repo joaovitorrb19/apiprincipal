@@ -1,0 +1,29 @@
+@model List<ItemPedidoModel>
+
+    <table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Item Pedido</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade do Produto</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.ItemPedidoId</td>
+                <td>@item.Produto.NomeProduto</td>
+                <td>@item.Quantidade</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="ItemPedido" asp-action="Cadastrar" asp-route-ItemPedidoId="@item.ItemPedidoId" asp-route-PedidoId="@item.PedidoId">Editar</a>
+                    <a class="btn btn-primary" asp-controller="ItemPedido" asp-action="Excluir" asp-route-id="@item.ItemPedidoId">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+
+<a class="btn btn-primary" asp-controller="ItemPedido" asp-action="Cadastrar" asp-route-PedidoId="@ViewBag.PedidoId">Adicionar Item</a>
+<a class="btn btn-primary" asp-action="Index">Voltar</a>

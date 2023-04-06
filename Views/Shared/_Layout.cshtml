@@ -1,6 +1,12 @@
+@inject UserManager<UsuarioModel> User
+
+@{
+    var ControllerAtivo = Context.Request.RouteValues["controller"].ToString();
+}
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,40 +15,68 @@
     <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/css/_Layout.css">
 </head>
-<body>
-    
-         <nav class="navbar navbar-expand-lg navbar-expand-xxl bg-body-tertiary navbar-dark bg-dark" >
 
-            <div class="container-fluid">
-                   
-                    <ul class="navbar-nav">
-                        <a class="navbar-brand" href="#">API Principal</a>
-                        <partial name="_LoginLogoutPartial"></partial>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-controller="Home" asp-action="Index">Home</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link " asp-controller="Categoria" asp-action="Cadastrar">Categorias</a>
-                        </li>          
-                  
-                    </ul>
-                     
-            </div>
-        </nav>
-    
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-expand-xxl bg-body-tertiary navbar-dark bg-dark">
+
+        <div class="container-fluid">
+
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#">API Principal</a>
+                @{
+                    if (Context.User.Identity.IsAuthenticated)
+                    {
+
+                        var UsuarioAtivo = await User.FindByNameAsync(Context.User.Identity.Name);
+                        var IsUsuarioAtivoAdm = await User.IsInRoleAsync(UsuarioAtivo, "administrador");
+                        if (IsUsuarioAtivoAdm)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Categoria" ? "active" : "")" asp-controller="Categoria" asp-action="Index">Categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Produto" ? "active" : "")" asp-controller="Produto" asp-action="Index">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Pedido" ? "active" : "")" asp-controller="Pedido" asp-action="Index">Pedidos</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @(ControllerAtivo == "Pedido" ? "active" : "")" asp-controller="Pedido" asp-action="Index">Pedidos</a>
+                            </li>
+                        }
+
+                    }
+                }
+                <partial name="_LoginLogoutPartial"></partial>
+            </ul>
+
+        </div>
+    </nav>
+
 
     <div class="container">
         <partial name="_MensagemPartial"></partial>
         @RenderBody()
 
     </div>
-    
+
     <footer class="border-top footer text-muted bg-dark" style="">
         <div class="container text-white">
-            &copy; 2023 - AulaUsuarios - Joaozinho
+            &copy; 2023 - Joaozinho
         </div>
     </footer>
-    
-<script src="/lib/bootstrap5/dist/js/bootstrap.js"></script>
+
+    <script src="/lib/bootstrap5/dist/js/bootstrap.js"></script>
 </body>
+
 </html>

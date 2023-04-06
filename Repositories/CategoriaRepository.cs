@@ -18,7 +18,7 @@ namespace ApiPrincipal.Repositories {
         }
 
         public async Task<CategoriaModel> BuscarPorId(int id){
-            var CategoriaBD = await BuscarCategoriaPorId(id);
+            var CategoriaBD = await BuscarEntidadePorId(id);
             return CategoriaBD;
         }
 
@@ -31,11 +31,11 @@ namespace ApiPrincipal.Repositories {
         }
 
         public  async Task Excluir(int id){
-          var CategoriaBD = await BuscarCategoriaPorId(id);
+          var CategoriaBD = await BuscarEntidadePorId(id);
            _context.Categorias.Remove(CategoriaBD);
         }
 
-        public async Task<CategoriaModel> BuscarCategoriaPorId(int id){
+        public async Task<CategoriaModel> BuscarEntidadePorId(int id){
 
             return await _context.Categorias.FindAsync(id);
         }
